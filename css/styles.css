@@ -889,20 +889,33 @@ button {
     }
 
     .tab-strip {
-        flex-wrap: wrap;
+        position: static;
+        flex-wrap: nowrap;
         overflow-x: visible;
         border-bottom: 1px solid var(--panel-border);
     }
 
     .tab {
-        flex: 1 1 auto;
+        display: none;
+        flex: 1;
         justify-content: center;
-        padding: 8px 10px;
+        padding: 8px 12px;
         font-size: 12px;
+    }
+
+    .tab.active {
+        display: inline-flex;
+        justify-content: flex-start;
+        background: var(--editor);
+        color: var(--text);
     }
 
     .tab.active::after {
         bottom: 0;
+    }
+
+    .tab-spacer {
+        display: none;
     }
 
     .editor-file {
@@ -981,10 +994,6 @@ button {
 @media (max-width: 420px) {
     .title-bar-text {
         font-size: 11px;
-    }
-
-    .tab {
-        flex: 1 1 45%;
     }
 
     .status-clock {
