@@ -36,6 +36,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: calc(var(--header-h) + 4px);
+    overflow-x: hidden;
 }
 
 body {
@@ -963,9 +964,33 @@ button {
         display: none;
     }
 
-    .status-right .status-item:first-child,
     .status-right .status-item:last-child {
         display: inline;
+    }
+
+    .status-left .status-item {
+        display: none;
+    }
+
+    .status-left .status-item:first-child {
+        display: inline;
+    }
+
+    .status-sep {
+        display: none;
+    }
+
+    .status-bar {
+        overflow: hidden;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .status-left,
+    .status-right {
+        flex: 0 0 auto;
+        min-width: 0;
+        gap: 4px;
     }
 
     .status-item {
@@ -998,10 +1023,6 @@ button {
 
     .status-clock {
         min-width: 56px;
-    }
-
-    .status-sep {
-        display: none;
     }
 }
 
