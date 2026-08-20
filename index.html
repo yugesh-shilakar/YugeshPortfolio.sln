@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yugesh Raj Shilakar - Mid-Level Software Engineer. ASP.NET Core, C#, SQL Server, Dapper, Enterprise ERP.">
+    <title>portfolio.sln - Yugesh Raj Shilakar</title>
+    <link rel="icon" type="image/png" href="icons8-visual-studio-48.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="ide-header">
+        <div class="title-bar">
+            <span class="title-bar-text" id="titleBarText">portfolio.sln — Yugesh Raj Shilakar</span>
+            <span class="title-bar-controls">
+                <span class="tc tc-min"></span>
+                <span class="tc tc-max"></span>
+                <span class="tc tc-close"></span>
+            </span>
+        </div>
+        <nav class="menu-bar">
+            <div class="menu">
+                <button type="button" class="menu-trigger">File</button>
+                <div class="menu-dropdown">
+                    <span class="menu-item">New Solution <em>Ctrl+Shift+N</em></span>
+                    <span class="menu-item">Open Solution <em>Ctrl+Shift+O</em></span>
+                    <span class="menu-sep"></span>
+                    <span class="menu-item">Save All <em>Ctrl+Shift+S</em></span>
+                    <span class="menu-item">Exit</span>
+                </div>
+            </div>
+            <div class="menu">
+                <button type="button" class="menu-trigger">Edit</button>
+                <div class="menu-dropdown">
+                    <span class="menu-item">Undo <em>Ctrl+Z</em></span>
+                    <span class="menu-item">Redo <em>Ctrl+Y</em></span>
+                    <span class="menu-sep"></span>
+                    <span class="menu-item">Find in Files <em>Ctrl+Shift+F</em></span>
+                </div>
+            </div>
+            <div class="menu">
+                <button type="button" class="menu-trigger">View</button>
+                <div class="menu-dropdown">
+                    <span class="menu-item" data-scroll="about">About.cs</span>
+                    <span class="menu-item" data-scroll="experience">Experience.cs</span>
+                    <span class="menu-item" data-scroll="projects">Projects.cs</span>
+                    <span class="menu-item" data-scroll="skills">Skills.cs</span>
+                    <span class="menu-item" data-scroll="education">Education.cs</span>
+                    <span class="menu-item" data-scroll="sideprojects">SideProjects.cs</span>
+                    <span class="menu-item" data-scroll="contact">Contact.cs</span>
+                    <span class="menu-item" data-scroll="social">Social.cs</span>
+                    <span class="menu-item" data-scroll="photogallery">photoGallery.json</span>
+                </div>
+            </div>
+            <div class="menu">
+                <button type="button" class="menu-trigger">Git</button>
+                <div class="menu-dropdown">
+                    <span class="menu-item">Push <em>Ctrl+Shift+P</em></span>
+                    <span class="menu-item">Pull</span>
+                    <span class="menu-item">Commit <em>Ctrl+Enter</em></span>
+                </div>
+            </div>
+            <div class="menu">
+                <button type="button" class="menu-trigger">Project</button>
+                <div class="menu-dropdown">
+                    <span class="menu-item">Add New Item</span>
+                    <span class="menu-item">Rebuild Solution</span>
+                    <span class="menu-item">Manage NuGet Packages</span>
+                </div>
+            </div>
+            <div class="menu">
+                <button type="button" class="menu-trigger">Build</button>
+                <div class="menu-dropdown">
+                    <span class="menu-item">Build Solution <em>Ctrl+Shift+B</em></span>
+                    <span class="menu-item">Rebuild Solution</span>
+                </div>
+            </div>
+            <div class="menu">
+                <button type="button" class="menu-trigger">Help</button>
+                <div class="menu-dropdown">
+                    <span class="menu-item">About Yugesh Raj Shilakar</span>
+                </div>
+            </div>
+        </nav>
+        <div class="toolbar">
+            <div class="toolbar-left">
+                <button type="button" class="toolbar-btn" title="New Project">
+                    <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 2h12v10l-3 3H2z"/><path d="M5 7h6M8 4v6"/></svg>
+                </button>
+                <button type="button" class="toolbar-btn" title="Open">
+                    <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 6l2-3h7l2 3h3v8H1z"/></svg>
+                </button>
+                <button type="button" class="toolbar-btn" title="Save">
+                    <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 2h11l1 1v11H2z"/><path d="M5 2v4h6V2M5 14v-4h6v4"/></svg>
+                </button>
+                <span class="toolbar-sep"></span>
+                <button type="button" class="toolbar-btn" title="Undo">
+                    <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 11a4 4 0 1 0 0-8H3"/><path d="M6 7 3 4l3-3"/></svg>
+                </button>
+                <button type="button" class="toolbar-btn" title="Redo">
+                    <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M10 11a4 4 0 1 1 0-8h3"/><path d="M10 7l3-3-3-3"/></svg>
+                </button>
+                <span class="toolbar-sep"></span>
+                <button type="button" class="toolbar-btn toolbar-run" title="Start">
+                    <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" stroke="none"><path d="M4 2l10 6-10 6z"/></svg>
+                </button>
+                <span class="toolbar-spacer"></span>
+                <div class="search-box">
+                    <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14"/></svg>
+                    <input type="text" placeholder="Search (Ctrl+Q)" aria-label="Search">
+                </div>
+                <button type="button" class="toolbar-btn explorer-toggle" id="explorerToggle" title="Toggle Solution Explorer">
+                    <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 3h12M2 8h12M2 13h12"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="ide-body">
+
+        <aside class="activity-bar" aria-label="Activity bar">
+            <span class="activity-icon active" title="Solution Explorer">
+                <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 2h12v12H2z"/><path d="M6 2v12"/></svg>
+            </span>
+            <span class="activity-icon" title="Search">
+                <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14"/></svg>
+            </span>
+            <span class="activity-icon" title="Source Control">
+                <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="5" cy="4" r="1.6"/><circle cx="11" cy="12" r="1.6"/><circle cx="5" cy="12" r="1.6"/><path d="M5 5.6v4.8M5 12c0-3 6-3 6-6"/></svg>
+            </span>
+            <span class="activity-icon" title="Extensions">
+                <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 2v3H2v9h9v-3h3V2z"/><path d="M5 8h5"/></svg>
+            </span>
+            <span class="activity-icon activity-bottom" title="Settings">
+                <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 4h12M2 8h12M2 12h12"/><circle cx="6" cy="4" r="1.4"/><circle cx="10" cy="8" r="1.4"/><circle cx="5" cy="12" r="1.4"/></svg>
+            </span>
+        </aside>
+
+        <aside class="side-panel solution-explorer" id="solutionExplorer" aria-label="Solution Explorer">
+            <div class="panel-title">Solution Explorer</div>
+            <div class="panel-body tree">
+
+                <div class="tree-node lvl0 tree-folder"><span class="tree-arrow">▾</span><span class="folder-ic"></span>solution <b>'portfolio'</b> (1 of 1 project)</div>
+
+                <div class="tree-node lvl1 tree-folder"><span class="tree-arrow">▾</span><span class="folder-ic"></span>YugeshRaj.Shilakar</div>
+
+                <div class="tree-node lvl2 tree-folder"><span class="tree-arrow">▸</span><span class="folder-ic"></span>Properties</div>
+
+                <div class="tree-node lvl2 tree-folder"><span class="tree-arrow">▸</span><span class="folder-ic"></span>References</div>
+
+                <div class="tree-node lvl2 tree-folder"><span class="tree-arrow">▾</span><span class="folder-ic"></span>Engineer</div>
+
+                <div class="tree-node lvl3"><a class="tree-link active" href="#about"><span class="file-ic cs"></span>About.cs</a></div>
+                <div class="tree-node lvl3"><a class="tree-link" href="#experience"><span class="file-ic cs"></span>Experience.cs</a></div>
+                <div class="tree-node lvl3"><a class="tree-link" href="#projects"><span class="file-ic cs"></span>Projects.cs</a></div>
+                <div class="tree-node lvl3"><a class="tree-link" href="#skills"><span class="file-ic cs"></span>Skills.cs</a></div>
+                <div class="tree-node lvl3"><a class="tree-link" href="#education"><span class="file-ic cs"></span>Education.cs</a></div>
+                <div class="tree-node lvl3"><a class="tree-link" href="#sideprojects"><span class="file-ic cs"></span>SideProjects.cs</a></div>
+                <div class="tree-node lvl3"><a class="tree-link" href="#contact"><span class="file-ic cs"></span>Contact.cs</a></div>
+                <div class="tree-node lvl3"><a class="tree-link" href="#social"><span class="file-ic cs"></span>Social.cs</a></div>
+                <div class="tree-node lvl3"><a class="tree-link" href="#photogallery"><span class="file-ic json"></span>photoGallery.json</a></div>
+
+                <div class="tree-node lvl2"><span class="file-ic json"></span>appsettings.json</div>
+                <div class="tree-node lvl2"><span class="file-ic proj"></span>portfolio.csproj</div>
+
+            </div>
+        </aside>
+
+        <main class="editor-area">
+
+            <div class="tab-strip" id="tabStrip">
+                <a class="tab active" href="#about"><span class="tab-ic cs"></span>About.cs</a>
+                <a class="tab" href="#experience"><span class="tab-ic cs"></span>Experience.cs</a>
+                <a class="tab" href="#projects"><span class="tab-ic cs"></span>Projects.cs</a>
+                <a class="tab" href="#skills"><span class="tab-ic cs"></span>Skills.cs</a>
+                <a class="tab" href="#education"><span class="tab-ic cs"></span>Education.cs</a>
+                <a class="tab" href="#sideprojects"><span class="tab-ic cs"></span>SideProjects.cs</a>
+                <a class="tab" href="#contact"><span class="tab-ic cs"></span>Contact.cs</a>
+                <a class="tab" href="#social"><span class="tab-ic cs"></span>Social.cs</a>
+                <a class="tab" href="#photogallery"><span class="tab-ic json"></span>photoGallery.json</a>
+                <span class="tab-spacer"></span>
+            </div>
+
+            <section id="about" class="editor-file active">
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// about.cs</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// The engineer behind this solution.</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="k">namespace</span> <span class="t">YugeshRaj</span>.<span class="t">Shilakar</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">{</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">class</span> <span class="t">About</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="c">// Mid-Level Software Engineer with hands-on experience in designing,</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="c">// developing, maintaining, and enhancing enterprise web applications using</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="c">// ASP.NET Core, C#, SQL Server, Dapper, JavaScript, jQuery, and REST APIs.</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="c">// Currently contributing to enterprise ERP solutions at Foneinsure Pvt. Ltd.</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="c">// for National Life Insurance Company, Sanima Reliance Life Insurance,</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="c">// and accounting &amp; financial management systems.</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Name</span> =&gt; <span class="s">"Yugesh Raj Shilakar"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Level</span> =&gt; <span class="s">"Mid-Level Software Engineer"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Employer</span> =&gt; <span class="s">"Foneinsure Pvt. Ltd."</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Location</span> =&gt; <span class="s">"Kathmandu, Nepal"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span>[] <span class="p">Stack</span> =&gt; { <span class="s">"ASP.NET Core"</span>, <span class="s">"C#"</span>, <span class="s">"SQL Server"</span>, <span class="s">"Dapper"</span>, <span class="s">"JavaScript"</span>, <span class="s">"jQuery"</span>, <span class="s">"REST APIs"</span> };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span>[] <span class="p">Domains</span> =&gt; { <span class="s">"Insurance Operations"</span>, <span class="s">"Accounting &amp; Finance"</span>, <span class="s">"MIS Reporting"</span>, <span class="s">"API Integration"</span> };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    }</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">}</span></div>
+            </section>
+
+            <section id="experience" class="editor-file">
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// experience.cs</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="k">namespace</span> <span class="t">YugeshRaj</span>.<span class="t">Shilakar</span>.<span class="t">Experience</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">{</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">class</span> <span class="t">Role</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Title</span> = <span class="s">"Mid-Level Software Engineer"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Company</span> = <span class="s">"Foneinsure Pvt. Ltd., Nepal"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Period</span> = <span class="s">"2024 - Present"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span>[] <span class="p">Highlights</span> =</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Develop and maintain enterprise apps using ASP.NET Core MVC, C#, Dapper, SQL Server, JS, jQuery, Razor, HTML, CSS."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"ERP projects for National Life Insurance &amp; Sanima Reliance - modules, enhancements, reports, workflows, production fixes."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Insurance processes: policy operations, claims, underwriting, financial transactions, incentive calculations, reporting."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Complex SQL Server work: CTEs, temp tables, window functions, joins, aggregations, stored procedures."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Accounting modules: double-entry, debit/credit, vouchers, accounts &amp; sub-accounts, purchase/sales, TDS, VAT, balances."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"General Ledger, vouchers, branch-wise accounting, transaction references, financial reporting workflows."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"MIS &amp; operational reports: sales, purchase, TDS, incentive, transaction, voucher, accounting."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"REST API integration: JSON request/response, validation, error handling, failed-transaction handling."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"eSewa Travels &amp; Tours: airline ticketing, passengers, sales invoices, payments, VAT, account mapping."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Bulk-data processing via JSON-based database procedures and transactional workflows."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Troubleshoot app, database, API, deployment; IIS config, logging, file storage, connectivity."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Application logging + database-based log monitoring for traceability and production analysis."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Database changes, data migration, production data correction, controlled SQL scripts."</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    }</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">class</span> <span class="t">Role2</span> <span class="c">// .NET Developer Intern</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Title</span> = <span class="s">".NET Developer Intern"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Company</span> = <span class="s">"Swift Innovations, US - Remote"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Period</span> = <span class="s">"2023"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span>[] <span class="p">Highlights</span> =</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Developed web applications using .NET MVC and Entity Framework Core."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Performed web scraping and structured data collection from external websites."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Processed and maintained datasets using Excel and MongoDB."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Worked with relational and NoSQL data storage environments."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Collaborated remotely using task-management and time-tracking workflows."</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    }</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">class</span> <span class="t">Role3</span> <span class="c">// Database Administrator - Associated Role</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Title</span> = <span class="s">"Database Administrator - Associated Role"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Company</span> = <span class="s">"Udaaya Samaj, Asan"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Period</span> = <span class="s">"Oct 2021 - Jan 2022"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span>[] <span class="p">Highlights</span> =</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Managed relational datasets using MySQL."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Maintained structured records from handwritten documentation and minutes."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Assisted digitalization and database organization of historical records."</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    }</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">}</span></div>
+            </section>
+
+            <section id="projects" class="editor-file">
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// projects.cs</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="k">namespace</span> <span class="t">YugeshRaj</span>.<span class="t">Shilakar</span>.<span class="t">Projects</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">{</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">class</span> <span class="t">InsuranceERP</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Client</span> = <span class="s">"National Life Insurance Co. &amp; Sanima Reliance Life Insurance"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span>[] <span class="p">Details</span> =</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Enterprise insurance ERP modules for core insurance and financial operations."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Business workflows, validations, transactional processing, and reporting requirements."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Complex SQL queries and stored procedures for transaction processing and MIS reporting."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Claims, underwriting, financial transactions, incentive calculations, operational reporting."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Enhancements and production fixes based on changing business requirements."</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    }</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">class</span> <span class="t">AccountingSystem</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span>[] <span class="p">Details</span> =</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Double-entry accounting and complete debit/credit transaction processing."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Account, sub-account, branch, voucher, transaction, and ledger workflows."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Purchase and sales voucher processing with associated accounting entries."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"VAT and TDS calculations, transaction posting, account balances, financial reporting."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Reports: opening balances, debit/credit transactions, ledger movements, closing balances."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Stored procedures and SQL queries for complex accounting calculations."</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    }</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">class</span> <span class="t">TravelTicketing</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Client</span> = <span class="s">"eSewa Travels and Tours"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span>[] <span class="p">Details</span> =</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Airline ticketing and sales-invoice functionality for travel operations."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Passenger management, ticket sales, invoice registration, payment processing."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"API integrations using structured JSON data for system-to-system communication."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"Payment-mode and account mapping logic for financial transaction processing."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">            <span class="s">"VAT-related transaction handling and invoice processing."</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    }</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">}</span></div>
+            </section>
+
+            <section id="skills" class="editor-file">
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// skills.cs</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="k">public</span> <span class="k">class</span> <span class="t">SkillSet</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">{</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span>[] <span class="p">Languages</span> = { <span class="s">"C#"</span>, <span class="s">"SQL"</span>, <span class="s">"JavaScript"</span>, <span class="s">"HTML5"</span>, <span class="s">"CSS3"</span> };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span>[] <span class="p">Backend</span> = { <span class="s">"ASP.NET Core"</span>, <span class="s">"ASP.NET Core MVC"</span>, <span class="s">".NET 8"</span>, <span class="s">"REST API"</span>, <span class="s">"Dapper"</span>, <span class="s">"Entity Framework Core"</span> };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span>[] <span class="p">Databases</span> = { <span class="s">"Microsoft SQL Server"</span>, <span class="s">"MySQL"</span>, <span class="s">"MongoDB"</span> };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span>[] <span class="p">DatabaseDev</span> = { <span class="s">"Stored Procedures"</span>, <span class="s">"CTEs"</span>, <span class="s">"Window Functions"</span>, <span class="s">"Transactions"</span>, <span class="s">"JSON Processing"</span>, <span class="s">"Query Optimization"</span>, <span class="s">"Data Migration"</span>, <span class="s">"Reporting Queries"</span> };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span>[] <span class="p">Frontend</span> = { <span class="s">"Razor Views"</span>, <span class="s">"JavaScript"</span>, <span class="s">"jQuery"</span>, <span class="s">"AJAX"</span>, <span class="s">"DataTables"</span>, <span class="s">"Select2"</span> };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span>[] <span class="p">Architecture</span> = { <span class="s">"MVC"</span>, <span class="s">"Web App Development"</span>, <span class="s">"API Integration"</span>, <span class="s">"Business Logic"</span>, <span class="s">"Enterprise Development"</span> };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span>[] <span class="p">AccountingErp</span> = { <span class="s">"General Ledger"</span>, <span class="s">"Double-Entry Accounting"</span>, <span class="s">"Debit/Credit"</span>, <span class="s">"Voucher Management"</span>, <span class="s">"Accounts &amp; Sub-Accounts"</span>, <span class="s">"VAT"</span>, <span class="s">"TDS"</span>, <span class="s">"Sales &amp; Purchase"</span>, <span class="s">"Financial Reporting"</span> };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span>[] <span class="p">Insurance</span> = { <span class="s">"Insurance ERP"</span>, <span class="s">"Claims"</span>, <span class="s">"Underwriting"</span>, <span class="s">"Financial Transactions"</span>, <span class="s">"MIS Reporting"</span>, <span class="s">"Incentive Processing"</span> };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span>[] <span class="p">Tools</span> = { <span class="s">"Visual Studio"</span>, <span class="s">"SSMS"</span>, <span class="s">"Git"</span>, <span class="s">"TortoiseGit"</span>, <span class="s">"IIS"</span>, <span class="s">"Postman"</span> };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span>[] <span class="p">Other</span> = { <span class="s">"JSON"</span>, <span class="s">"REST APIs"</span>, <span class="s">"API Integration"</span>, <span class="s">"Application Logging"</span>, <span class="s">"Production Support"</span>, <span class="s">"Debugging"</span> };</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">}</span></div>
+            </section>
+
+            <section id="education" class="editor-file">
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// education.cs</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="k">public</span> <span class="k">class</span> <span class="t">Education</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">{</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="c">// B.Sc. in Computer Science and Information Technology</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Degree</span> = <span class="s">"B.Sc. Computer Science and IT (BSc. CSIT)"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Period</span> = <span class="s">"2019 - 2024"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Note</span> = <span class="s">"Focus on computer science, software engineering, and information technology."</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="c">// Higher Secondary Education</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">HighSchool</span> = <span class="s">"+2 in Science"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">HighSchoolPeriod</span> = <span class="s">"2017 - 2019"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="c">// Schooling</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Schooling</span> = <span class="s">"Primary &amp; Secondary"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">SchoolingPeriod</span> = <span class="s">"2006 - 2017"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">}</span></div>
+            </section>
+
+            <section id="sideprojects" class="editor-file">
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// sideprojects.cs</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="k">public</span> <span class="k">class</span> <span class="t">SideProject</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">{</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Name</span> = <span class="s">"Third Vision"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Description</span> = <span class="s">"Real-time object detection web app using image uploads / video feed. Asian Hack 2022 - 3rd place team."</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Name2</span> = <span class="s">"PayoWork"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Description2</span> = <span class="s">"Freelancing platform connecting skilled professionals with clients for remote and offline freelance work."</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Name3</span> = <span class="s">"Aparichit"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Description3</span> = <span class="s">"Citizen platform for reporting corruption, accessing emergency services, suggestions, and anonymous assistance."</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Name4</span> = <span class="s">"YAnimee"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Description4</span> = <span class="s">"Web application for browsing and streaming anime content with a user-focused interface."</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">}</span></div>
+            </section>
+
+            <section id="contact" class="editor-file">
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// contact.cs</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="k">public</span> <span class="k">record</span> <span class="t">Contact</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">{</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Phone</span> =&gt; <span class="s">"+977-9860762545"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Email</span> =&gt; <span class="s">"officialyugeshshilakar@gmail.com"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Website</span> =&gt; <span class="s">"yugeshshilakar.com.np"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">string</span> <span class="p">Location</span> =&gt; <span class="s">"Kathmandu, Nepal"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">bool</span> <span class="p">OpenToWork</span> =&gt; <span class="v">true</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">}</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// References are available upon request.</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// Open to roles in ASP.NET Core, .NET, SQL Server, and ERP development.</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line contact-actions"><span class="ln"></span><span class="code"><a class="contact-link download" href="Yugesh_Raj_Shilakar.pdf" download="Yugesh_Raj_Shilakar.pdf">downloadCV() =&gt; "Yugesh_Raj_Shilakar.pdf"</a></span></div>
+                <div class="code-line contact-actions"><span class="ln"></span><span class="code"><a class="contact-link" href="mailto:officialyugeshshilakar@gmail.com">mailto:officialyugeshshilakar@gmail.com</a></span></div>
+                <div class="code-line contact-actions"><span class="ln"></span><span class="code"><a class="contact-link" href="tel:+9779860762545">tel:+977-9860762545</a></span></div>
+                <div class="code-line contact-actions"><span class="ln"></span><span class="code"><a class="contact-link" href="https://yugeshshilakar.com.np" target="_blank" rel="noopener">https://yugeshshilakar.com.np</a></span></div>
+            </section>
+
+            <section id="photogallery" class="editor-file">
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// photoGallery.json</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">{</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="p">"name"</span>: <span class="s">"photoGallery"</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="p">"type"</span>: <span class="s">"photography-gallery"</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="p">"url"</span>: <span class="s">"https://yugesh.info.np"</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="p">"description"</span>: <span class="s">"Personal photography gallery by Yugesh Raj Shilakar."</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="p">"collections"</span>: <span class="s">"landscape, portrait, street, travel"</span>,</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="p">"status"</span>: <span class="s">"open"</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">}</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// Open the gallery:</span></span></div>
+                <div class="code-line contact-actions"><span class="ln"></span><span class="code"><a class="contact-link" href="https://yugesh.info.np" target="_blank" rel="noopener">openGallery() =&gt; "https://yugesh.info.np"</a></span></div>
+            </section>
+
+            <section id="social" class="editor-file">
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// social.cs</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// Let's connect on social media.</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="k">namespace</span> <span class="t">YugeshRaj</span>.<span class="t">Shilakar</span>.<span class="t">Social</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">{</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    <span class="k">public</span> <span class="k">class</span> <span class="t">SocialLinks</span></span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    {</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Facebook</span> = <span class="s">"https://www.facebook.com/yugesh.shilakar"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Instagram</span> = <span class="s">"https://www.instagram.com/yugesh_shilakar/"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">LinkedIn</span> = <span class="s">"https://www.linkedin.com/in/yugesh-shilakar/"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">        <span class="k">public</span> <span class="k">string</span> <span class="p">Snapchat</span> = <span class="s">"https://www.snapchat.com/@royalshilakars"</span>;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">    }</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">}</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code">&nbsp;</span></div>
+                <div class="code-line"><span class="ln"></span><span class="code"><span class="c">// Click to open each profile:</span></span></div>
+                <div class="code-line contact-actions"><span class="ln"></span><span class="code"><a class="contact-link" href="https://www.facebook.com/yugesh.shilakar" target="_blank" rel="noopener">openFacebook() =&gt; "facebook.com/yugesh.shilakar"</a></span></div>
+                <div class="code-line contact-actions"><span class="ln"></span><span class="code"><a class="contact-link" href="https://www.instagram.com/yugesh_shilakar/" target="_blank" rel="noopener">openInstagram() =&gt; "instagram.com/yugesh_shilakar"</a></span></div>
+                <div class="code-line contact-actions"><span class="ln"></span><span class="code"><a class="contact-link" href="https://www.linkedin.com/in/yugesh-shilakar/" target="_blank" rel="noopener">openLinkedIn() =&gt; "linkedin.com/in/yugesh-shilakar"</a></span></div>
+                <div class="code-line contact-actions"><span class="ln"></span><span class="code"><a class="contact-link" href="https://www.snapchat.com/@royalshilakars" target="_blank" rel="noopener">openSnapchat() =&gt; "snapchat.com/@royalshilakars"</a></span></div>
+            </section>
+
+        </main>
+
+        <aside class="properties-panel" id="propertiesPanel" aria-label="Properties">
+            <div class="panel-title">
+                <span class="panel-title-text">Properties</span>
+                <button type="button" class="panel-toggle" id="propsToggle" title="Auto Hide" aria-expanded="true">
+                    <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 3l5 5-5 5"/></svg>
+                </button>
+            </div>
+            <div class="panel-body props-body" id="propsBody">
+                <div class="prop-row"><span class="prop-label">Name</span><span class="prop-value">Yugesh Raj Shilakar</span></div>
+                <div class="prop-row"><span class="prop-label">Role</span><span class="prop-value">Mid-Level Software Engineer</span></div>
+                <div class="prop-row"><span class="prop-label">Framework</span><span class="prop-value">ASP.NET Core</span></div>
+                <div class="prop-row"><span class="prop-label">Language</span><span class="prop-value">C#</span></div>
+                <div class="prop-row"><span class="prop-label">Database</span><span class="prop-value">SQL Server</span></div>
+                <div class="prop-row"><span class="prop-label">ORM</span><span class="prop-value">Dapper</span></div>
+                <div class="prop-row"><span class="prop-label">Location</span><span class="prop-value">Kathmandu, Nepal</span></div>
+                <div class="prop-row"><span class="prop-label">Status</span><span class="prop-value prop-ok">Open to work</span></div>
+            </div>
+            <div class="panel-rail">Properties</div>
+        </aside>
+
+    </div>
+
+    <footer class="status-bar">
+        <div class="status-left">
+            <span class="status-item status-ready">Ready</span>
+            <span class="status-sep"></span>
+            <span class="status-item">portfolio.sln</span>
+            <span class="status-sep"></span>
+            <span class="status-item">YugeshRaj.Shilakar</span>
+            <span class="status-sep"></span>
+            <span class="status-item status-branch">main*</span>
+        </div>
+        <div class="status-right">
+            <span class="status-item" id="statusPos">Ln 1, Col 1</span>
+            <span class="status-sep"></span>
+            <span class="status-item">0 errors</span>
+            <span class="status-sep"></span>
+            <span class="status-item">0 warnings</span>
+            <span class="status-sep"></span>
+            <span class="status-item">C#</span>
+            <span class="status-sep"></span>
+            <span class="status-item">{ }</span>
+            <span class="status-sep"></span>
+            <span class="status-item">LF</span>
+            <span class="status-sep"></span>
+            <span class="status-item">UTF-8</span>
+            <span class="status-sep"></span>
+            <span class="status-item status-clock" id="statusClock">00:00:00</span>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
