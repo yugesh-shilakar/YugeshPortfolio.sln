@@ -63,6 +63,15 @@
         });
     }
 
+    var ideBody = document.querySelector('.ide-body');
+    if (ideBody) {
+        ideBody.addEventListener('click', function (e) {
+            if (document.body.classList.contains('explorer-open') && !e.target.closest('.side-panel')) {
+                document.body.classList.remove('explorer-open');
+            }
+        });
+    }
+
     var propsToggle = document.getElementById('propsToggle');
     var propertiesPanel = document.getElementById('propertiesPanel');
 

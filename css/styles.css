@@ -829,8 +829,24 @@ button {
 }
 
 @media (max-width: 860px) {
+    :root {
+        --header-h: 62px;
+    }
+
     .activity-bar {
         display: none;
+    }
+
+    .menu-bar {
+        display: none;
+    }
+
+    .title-bar {
+        height: 28px;
+    }
+
+    .toolbar {
+        height: 34px;
     }
 
     .side-panel {
@@ -838,7 +854,7 @@ button {
         top: var(--header-h);
         left: 0;
         bottom: var(--status-h);
-        width: 280px;
+        width: min(280px, 85vw);
         height: auto;
         z-index: 1500;
         transform: translateX(-100%);
@@ -850,6 +866,18 @@ button {
         transform: translateX(0);
     }
 
+    body.explorer-open {
+        overflow: hidden;
+    }
+
+    body.explorer-open .ide-body::after {
+        content: '';
+        position: fixed;
+        inset: var(--header-h) 0 0 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1400;
+    }
+
     .explorer-toggle {
         display: flex;
     }
@@ -858,6 +886,42 @@ button {
         position: fixed;
         left: 6px;
         min-width: 200px;
+    }
+
+    .tab-strip {
+        flex-wrap: wrap;
+        overflow-x: visible;
+        border-bottom: 1px solid var(--panel-border);
+    }
+
+    .tab {
+        flex: 1 1 auto;
+        justify-content: center;
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .tab.active::after {
+        bottom: 0;
+    }
+
+    .editor-file {
+        padding: 6px 0 32px;
+    }
+
+    .code {
+        white-space: pre-wrap;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        padding-left: 10px;
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .ln {
+        flex-basis: 30px;
+        padding-right: 8px;
+        font-size: 11px;
     }
 }
 
@@ -877,22 +941,58 @@ button {
         display: none;
     }
 
-    .status-right .status-item:nth-child(n + 5) {
+    .toolbar-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .status-right .status-item {
         display: none;
     }
 
-    .status-sep:nth-of-type(n + 6) {
-        display: none;
+    .status-right .status-item:first-child,
+    .status-right .status-item:last-child {
+        display: inline;
+    }
+
+    .status-item {
+        font-size: 11px;
+    }
+
+    .status-bar {
+        padding: 0 8px;
     }
 
     .ln {
-        flex-basis: 40px;
-        padding-right: 10px;
+        flex-basis: 26px;
+        padding-right: 6px;
     }
 
     .code {
-        padding-left: 12px;
-        font-size: 12px;
+        padding-left: 8px;
+    }
+
+    .tab {
+        font-size: 11px;
+        padding: 7px 8px;
+    }
+}
+
+@media (max-width: 420px) {
+    .title-bar-text {
+        font-size: 11px;
+    }
+
+    .tab {
+        flex: 1 1 45%;
+    }
+
+    .status-clock {
+        min-width: 56px;
+    }
+
+    .status-sep {
+        display: none;
     }
 }
 
