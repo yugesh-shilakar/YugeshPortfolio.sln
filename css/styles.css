@@ -36,7 +36,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: calc(var(--header-h) + 4px);
-    overflow-x: hidden;
+    overflow: hidden;
+    height: 100%;
 }
 
 body {
@@ -44,7 +45,8 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow: hidden;
+    height: 100%;
     font-size: 14px;
 }
 
@@ -323,22 +325,23 @@ button {
 
 .ide-body {
     display: flex;
-    align-items: flex-start;
-    min-height: calc(100vh - var(--header-h) - var(--status-h));
+    height: calc(100% - var(--header-h) - var(--status-h));
+    overflow: hidden;
+    padding-left: 348px;
 }
 
 .activity-bar {
-    position: sticky;
+    position: fixed;
+    left: 0;
     top: var(--header-h);
+    bottom: var(--status-h);
     width: 48px;
-    flex: 0 0 48px;
     background: var(--activity);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4px;
     padding: 8px 0;
-    height: calc(100vh - var(--header-h) - var(--status-h));
     overflow-y: auto;
 }
 
@@ -371,12 +374,12 @@ button {
 }
 
 .side-panel {
-    position: sticky;
+    position: fixed;
+    left: 48px;
     top: var(--header-h);
+    bottom: var(--status-h);
     width: 300px;
-    flex: 0 0 300px;
     background: var(--panel);
-    height: calc(100vh - var(--header-h) - var(--status-h));
     display: flex;
     flex-direction: column;
     border-right: 1px solid var(--panel-border);
@@ -537,13 +540,16 @@ button {
 .editor-area {
     flex: 1;
     min-width: 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
     background: var(--editor);
     border-right: 1px solid var(--panel-border);
 }
 
 .tab-strip {
     position: sticky;
-    top: var(--header-h);
+    top: 0;
     z-index: 500;
     display: flex;
     background: var(--panel-2);
@@ -609,13 +615,12 @@ button {
 
 .editor-file {
     display: none;
-    padding: 10px 0 60px;
-    min-height: calc(100vh - var(--header-h) - var(--status-h));
-    scroll-margin-top: var(--header-h);
+    padding: 10px 0;
 }
 
 .editor-file.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ---------- Code lines ---------- */
@@ -643,7 +648,11 @@ button {
 }
 
 .code {
-    white-space: pre;
+    flex: 1;
+    min-width: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
     font-family: var(--mono);
     font-size: 13px;
     padding-left: 16px;
@@ -771,7 +780,9 @@ button {
 /* ---------- Status bar ---------- */
 
 .status-bar {
-    position: sticky;
+    position: fixed;
+    left: 0;
+    right: 0;
     bottom: 0;
     z-index: 2000;
     height: var(--status-h);
@@ -840,6 +851,10 @@ button {
 
     .menu-bar {
         display: none;
+    }
+
+    .ide-body {
+        padding-left: 0;
     }
 
     .title-bar {
@@ -919,9 +934,9 @@ button {
         display: none;
     }
 
-    .editor-file {
-        padding: 6px 0 32px;
-    }
+.editor-file {
+    padding: 6px 0;
+}
 
     .code {
         white-space: pre-wrap;

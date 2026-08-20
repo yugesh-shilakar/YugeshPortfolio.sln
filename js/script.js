@@ -9,6 +9,34 @@
     var clockEl = document.getElementById('statusClock');
     var scrollProgress = document.getElementById('scrollProgress');
     var explorerToggle = document.getElementById('explorerToggle');
+    var editorArea = document.querySelector('.editor-area');
+    var tabStrip = document.getElementById('tabStrip');
+    var activeFileId = 'about';
+
+    function fillLines(file) {
+        if (!editorArea || !file) return;
+        var spacer = file.querySelector('.line-filler');
+        if (!spacer) {
+            spacer = document.createElement('div');
+            spacer.className = 'line-filler';
+            file.appendChild(spacer);
+        }
+        spacer.innerHTML = '';
+        var headerH = tabStrip ? tabStrip.offsetHeight : 0;
+        var contentH = file.offsetHeight;
+        var available = (editorArea.clientHeight - headerH) - contentH;
+        var count = Math.max(0, Math.floor(available / 21));
+        var frag = document.createDocumentFragment();
+        for (var i = 0; i < count; i++) {
+            var row = document.createElement('div');
+            row.className = 'code-line';
+            var ln = document.createElement('span');
+            ln.className = 'ln';
+            row.appendChild(ln);
+            frag.appendChild(row);
+        }
+        spacer.appendChild(frag);
+    }
 
     function activateFile(id, scroll) {
         if (!document.getElementById(id)) return;
@@ -30,9 +58,12 @@
 
         if (scroll) {
             document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else {
-            window.scrollTo({ top: 0 });
+        } else if (editorArea) {
+            editorArea.scrollTop = 0;
         }
+
+        activeFileId = id;
+        fillLines(document.getElementById(id));
 
         document.body.classList.remove('explorer-open');
     }
@@ -108,13 +139,19 @@
     setInterval(updateClock, 1000);
 
     function onScroll() {
-        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        var progress = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
-        if (scrollProgress) {
-            scrollProgress.style.width = progress + '%';
-        }
+        if (!editorArea || !scrollProgress) return;
+        var max = editorArea.scrollHeight - editorArea.clientHeight;
+        var progress = max > 0 ? (editorArea.scrollTop / max) * 100 : 0;
+        scrollProgress.style.width = progress + '%';
     }
 
-    window.addEventListener('scroll', onScroll, { passive: true });
+    if (editorArea) {
+        editorArea.addEventListener('scroll', onScroll, { passive: true });
+    }
     onScroll();
+
+    window.addEventListener('resize', function () {
+        fillLines(document.getElementById(activeFileId));
+    });
+    fillLines(document.getElementById(activeFileId));
 })();
